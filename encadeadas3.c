@@ -1,11 +1,13 @@
+#include <stdio.h>
+
 typedef struct caixa{ 
     int valor;
-    caixa* prox;
+    struct caixa* prox;
 } caixa; 
 
 void exibe(caixa* caixa){
     while(caixa!= NULL){
-        printf("%d", caixa->valor);
+        printf("%d \n", caixa->valor);
         caixa=caixa->prox;
     }
 }
@@ -14,18 +16,18 @@ int main (){
     caixa c1,c2,c3,c4,c5;
 
     c1.valor= 1;
-		c2.valor= 3;
-		c3.valor= 9;
-		c4.valor= 7;
-		c5.valor= 5;
+	c2.valor= 3;
+	c3.valor= 9;
+	c4.valor= 7;
+	c5.valor= 5;
 
-		c1.prox= &c2;
-		c2.prox= &c3;
-		c3.prox= &c4;
-		c4.prox= &c5;
-		c5.prox= NULL;
+	c1.prox= &c2;
+	c2.prox= &c3;
+	c3.prox= &c4;
+	c4.prox= &c5;
+	c5.prox= NULL;
 
-		caixa* inicio= &c1;
+	caixa* inicio= &c1;
     //exibe todos os elementos
     exibe (inicio);
     caixa* cabeca= inicio;
@@ -51,4 +53,3 @@ int main (){
 }
 
   
-		exibe (inicio);
