@@ -1,6 +1,6 @@
 include <stdio.h>
 
-typedef struct{
+typedef struct caixa{
 		int valor;
 		struct caixa* prox;
 } caixa;
