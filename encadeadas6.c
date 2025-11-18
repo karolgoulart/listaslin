@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct caixa{
 		int valor;
@@ -6,6 +7,7 @@ typedef struct caixa{
 } caixa;
 
 caixa* insere( caixa*lista, int valor){
+  caixa*nova= malloc(sizeof(caixa));
   nova->valor=valor;
   nova->prox=NULL;
 
